@@ -28,7 +28,10 @@ public class SceneElement : SelectableElement
     {
         base.OnSubmit();
         Plugin.LOG.LogInfo("Scene clicked: " + name);
-        Mgr_ChapterSelect.Instance.StartThrowbackForScene(name);
+        var gsd = Mgr_Saves.saveData;
+        var variables = OnyxUtils.ParseSaveDataString(gsd.globalVariables);
+        if (SelectableScene.IsSceneSelectable(gsd, variables, name))
+            Mgr_ChapterSelect.Instance.StartThrowbackForScene(name);
     }
 
     private IEnumerator AnimateAlpha(RawImage image, Direction direction)

@@ -109,6 +109,7 @@ namespace ChapterSelect
             foreach (var scene in SelectableScene.AllScenes)
             {
                 Textures[scene.SceneName] = Assets.LoadAsset<Texture2D>("CH_I_" + scene.SceneName);
+                Textures["locked"] = Assets.LoadAsset<Texture2D>("locked");
             }
         }
     }

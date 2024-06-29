@@ -44,6 +44,11 @@ public class SelectableScene
         _overridenVisibility = overridenVisibility;
     }
 
+    public static bool IsSceneSelectable(GameplaySaveData data, Dictionary<string, object> saveVariables, string name)
+    {
+        return SceneNameToSceneMap[name].SceneVisibility(data, saveVariables) == Visibility.Visible;
+    }
+
     [SuppressMessage("ReSharper", "InvertIf")]
     public Visibility SceneVisibility(GameplaySaveData data, Dictionary<string, object> saveVariables)  // hot method
     {

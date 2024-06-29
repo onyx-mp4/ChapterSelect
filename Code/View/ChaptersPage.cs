@@ -123,7 +123,9 @@ public class ChaptersPage : TwoAxisElementListPage // => ElementListPage => Menu
                 // not a fan of storing "name that is critical" on the object name but i'm working with what i've got
                 sceneElement.name = _scenes[i].SceneName;
                 sceneElement.GetComponent<SceneElement>().onSelected = element.onSelected;
-                sceneElement.GetComponentInChildren<TextMeshProUGUI>().text = "<b> " + (i+1) + "</b>   " + _scenes[i].DisplayName;
+                var vis = _scenes[i].SceneVisibility(gsd, variables);
+                sceneElement.GetComponentInChildren<TextMeshProUGUI>().text = "<b> " + (i+1) + "</b>   " +
+                                                                              (vis == SelectableScene.Visibility.Visible ? _scenes[i].DisplayName : "???");
                 switch (_scenes[i].Minigame)
                 {
                     case SelectableScene.MinigameType.None:
@@ -138,10 +140,20 @@ public class ChaptersPage : TwoAxisElementListPage // => ElementListPage => Menu
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-                sceneElement.transform.GetChild(0).GetComponent<RawImage>().texture =
-                    Plugin.Textures[_scenes[i].SceneName];
+
+                if (vis == SelectableScene.Visibility.Visible)
+                {
+                    sceneElement.transform.GetChild(0).GetComponent<RawImage>().texture =
+                        Plugin.Textures[_scenes[i].SceneName];
+                    sceneElement.GetComponent<StaticStringLocaliser>().BaseText = _scenes[i].DisplayName;
+                }
+                else
+                {
+                    sceneElement.transform.GetChild(0).GetComponent<RawImage>().texture = Plugin.Textures["locked"];;
+                    sceneElement.GetComponent<StaticStringLocaliser>().BaseText = "???";
+                }
+                
                 GetComponent<SelectableGroupController>().elements.Add(sceneElement.GetComponent<SelectableElement>());
-                sceneElement.GetComponent<StaticStringLocaliser>().BaseText = _scenes[i].DisplayName;
                 sceneElement.GetComponent<StaticStringLocaliser>().textObj =
                     sceneElement.GetComponent<TextMeshProUGUI>();
                 sceneElement.GetComponent<StaticStringLocaliser>().enabled = true;
