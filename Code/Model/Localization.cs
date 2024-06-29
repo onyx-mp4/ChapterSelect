@@ -1,0 +1,116 @@
+using System.Collections.Generic;
+
+namespace ChapterSelect.Code;
+
+public abstract class Localization
+{
+    public class LocalizationElement
+    {
+        public string Key;
+        public string Value;
+    }
+
+    public static List<LocalizationElement> GetEnglishLocalizations()
+    {
+        return
+            new List<LocalizationElement>
+            {
+                new LocalizationElement { Key = "Chapters", Value = "Chapters" },
+                new LocalizationElement { Key = "Chapter", Value = "Chapter" },
+                new LocalizationElement { Key = "Ep. 1", Value = "Ep. 1" },
+                new LocalizationElement { Key = "Ep. 2", Value = "Ep. 2" },
+                new LocalizationElement { Key = "Ep. 3", Value = "Ep. 3" },
+                new LocalizationElement { Key = "Ep. 4", Value = "Ep. 4" },
+                new LocalizationElement { Key = "Ep. 5", Value = "Ep. 5" },
+                new LocalizationElement { Key = "Ep. 6", Value = "Ep. 6" },
+                new LocalizationElement { Key = "Ep. 7", Value = "Ep. 7" },
+                new LocalizationElement { Key = "Ep. 8", Value = "Ep. 8" },
+                new LocalizationElement { Key = "The Beach", Value = "The Beach" },
+                new LocalizationElement { Key = "Morning", Value = "Morning" },
+                new LocalizationElement { Key = "Meet Trish", Value = "Meet Trish" },
+                new LocalizationElement { Key = "Homeroom", Value = "Homeroom" },
+                new LocalizationElement { Key = "Music Room", Value = "Music Room" },
+                new LocalizationElement { Key = "Reed", Value = "Reed" },
+                new LocalizationElement { Key = "Trish", Value = "Trish" },
+                new LocalizationElement { Key = "Bus Home", Value = "Bus Home" },
+                new LocalizationElement { Key = "Naser and Naomi", Value = "Naser and Naomi" },
+                new LocalizationElement { Key = "Group Chat", Value = "Group Chat" },
+                new LocalizationElement { Key = "Kitchen", Value = "Kitchen" },
+                new LocalizationElement { Key = "The Meteor", Value = "The Meteor" },
+                new LocalizationElement { Key = "Secret Admirer", Value = "Secret Admirer" },
+                new LocalizationElement { Key = "Naser Drive", Value = "Naser Drive" },
+                new LocalizationElement { Key = "Pre Assembly", Value = "Pre Assembly" },
+                new LocalizationElement { Key = "Emergency Meeting", Value = "Emergency Meeting" },
+                new LocalizationElement { Key = "Carpe Diem", Value = "Carpe Diem" },
+                new LocalizationElement { Key = "Your Diems", Value = "Your Diems" },
+                new LocalizationElement { Key = "Naomi", Value = "Naomi" },
+                new LocalizationElement { Key = "Rosa", Value = "Rosa" },
+                new LocalizationElement { Key = "Memory Box", Value = "Memory Box" },
+                new LocalizationElement { Key = "Fang Searches", Value = "Fang Searches" },
+                new LocalizationElement { Key = "Midi Music", Value = "Midi Music" },
+                new LocalizationElement { Key = "Photo Day AM", Value = "Photo Day AM" },
+                new LocalizationElement { Key = "Kill Me Now", Value = "Kill Me Now" },
+                new LocalizationElement { Key = "Rooftop Reed", Value = "Rooftop Reed" },
+                new LocalizationElement { Key = "Naomi The Genius", Value = "Naomi The Genius" },
+                new LocalizationElement { Key = "The Walk Home", Value = "The Walk Home" },
+                new LocalizationElement { Key = "Audition Day A", Value = "Audition Day A" },
+                new LocalizationElement { Key = "Audition Day B", Value = "Audition Day B" },
+                new LocalizationElement { Key = "Audition Performance", Value = "Audition Performance" },
+                new LocalizationElement { Key = "Audition Day D", Value = "Audition Day D" },
+                new LocalizationElement { Key = "Caldera Dreams", Value = "Caldera Dreams" },
+                new LocalizationElement { Key = "Back to Reality", Value = "Back to Reality" },
+                new LocalizationElement { Key = "Meteor Class", Value = "Meteor Class" },
+                new LocalizationElement { Key = "Stella Wedge", Value = "Stella Wedge" },
+                new LocalizationElement { Key = "BOTB Ramp Up", Value = "BOTB Ramp Up" },
+                new LocalizationElement { Key = "Hunt For Mango", Value = "Hunt For Mango" },
+                new LocalizationElement { Key = "Busted For Posters", Value = "Busted For Posters" },
+                new LocalizationElement { Key = "LnL Intro", Value = "LnL Intro" },
+                new LocalizationElement { Key = "LnL", Value = "LnL" },
+                new LocalizationElement { Key = "Back To The Garage", Value = "Back To The Garage" },
+                new LocalizationElement { Key = "College Apps", Value = "College Apps" },
+                new LocalizationElement { Key = "Future Is Soon", Value = "Future Is Soon" },
+                new LocalizationElement { Key = "Sage Wedge", Value = "Sage Wedge" },
+                new LocalizationElement { Key = "Time To Try", Value = "Time To Try" },
+                new LocalizationElement { Key = "The Tri Force", Value = "The Tri Force" },
+                new LocalizationElement { Key = "Rosa Roof", Value = "Rosa Roof" },
+                new LocalizationElement { Key = "The Other Shoe", Value = "The Other Shoe" },
+                new LocalizationElement { Key = "LnL 2", Value = "LnL 2" },
+                new LocalizationElement { Key = "The Short Goodbye", Value = "The Short Goodbye" },
+                new LocalizationElement { Key = "Back Home", Value = "Back Home" },
+                new LocalizationElement { Key = "Breakfast Time", Value = "Breakfast Time" },
+                new LocalizationElement { Key = "Trish Walk", Value = "Trish Walk" },
+                new LocalizationElement { Key = "The Night Before", Value = "The Night Before" },
+                new LocalizationElement { Key = "The Parent Call", Value = "The Parent Call" },
+                new LocalizationElement { Key = "Ride Along", Value = "Ride Along" },
+                new LocalizationElement { Key = "Setup Time", Value = "Setup Time" },
+                new LocalizationElement { Key = "Green Room", Value = "Green Room" },
+                new LocalizationElement { Key = "Naser", Value = "Naser" },
+                new LocalizationElement { Key = "Bad Vibes", Value = "Bad Vibes" },
+                new LocalizationElement { Key = "Fuck It", Value = "\"Fuck It\"" },
+                new LocalizationElement { Key = "Battle of the Bands", Value = "Battle of the Bands" },
+                new LocalizationElement { Key = "The Fight", Value = "The Fight" },
+                new LocalizationElement { Key = "The Aftermath", Value = "The Aftermath" },
+                new LocalizationElement { Key = "The Aurora", Value = "The Aurora" },
+                new LocalizationElement { Key = "Going Away", Value = "Going Away" },
+                new LocalizationElement { Key = "Before LnL", Value = "Before LnL" },
+                new LocalizationElement { Key = "After LnL", Value = "After LnL" },
+                new LocalizationElement { Key = "Beach Alone", Value = "Beach Alone" },
+                new LocalizationElement { Key = "Friends Arrive", Value = "Friends Arrive" },
+                new LocalizationElement { Key = "Turn For the Worse", Value = "Turn For the Worse" },
+                new LocalizationElement { Key = "The Ritual", Value = "The Ritual" },
+                new LocalizationElement { Key = "Be Not Alarmed", Value = "Be Not Alarmed" },
+                new LocalizationElement { Key = "Farewell Lava Java", Value = "Farewell Lava Java" },
+                new LocalizationElement { Key = "Worm Drama Check In", Value = "Worm Drama Check In" },
+                new LocalizationElement { Key = "Naomi Date", Value = "Naomi Date" },
+                new LocalizationElement { Key = "Naomi Hang", Value = "Naomi Hang" },
+                new LocalizationElement { Key = "Bad News", Value = "Bad News" },
+                new LocalizationElement { Key = "Trish And Fang", Value = "Trish And Fang" },
+                new LocalizationElement { Key = "Beach Day", Value = "Beach Day" },
+                new LocalizationElement { Key = "The Last Day", Value = "The Last Day" },
+                new LocalizationElement { Key = "On Arrival", Value = "On Arrival" },
+                new LocalizationElement { Key = "Final Prep", Value = "Final Prep" },
+                new LocalizationElement { Key = "Caldera Fest", Value = "Caldera Fest" }
+            };
+        
+    }
+}
