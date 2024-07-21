@@ -122,7 +122,10 @@ public class ChaptersPage : TwoAxisElementListPage // => ElementListPage => Menu
                 var sceneElement = Instantiate(sceneElementPrefab, itemGrid.transform);
                 // not a fan of storing "name that is critical" on the object name but i'm working with what i've got
                 sceneElement.name = _scenes[i].SceneName;
-                sceneElement.GetComponent<SceneElement>().onSelected = element.onSelected;
+                SceneElement sceneElementComponent = sceneElement.GetComponent<SceneElement>();
+                sceneElementComponent.onSelected = element.onSelected;
+                sceneElementComponent._selectOnPointerEnter = true;
+                sceneElement.GetComponent<Button>()?.onClick.AddListener( () => sceneElementComponent.OnSubmit());
                 var vis = _scenes[i].SceneVisibility(gsd, variables);
                 sceneElement.GetComponentInChildren<TextMeshProUGUI>().text = "<b> " + (i+1) + "</b>   " +
                                                                               (vis == SelectableScene.Visibility.Visible ? _scenes[i].DisplayName : "???");
