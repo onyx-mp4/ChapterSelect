@@ -26,7 +26,7 @@ public class ChaptersPage : TwoAxisElementListPage // => ElementListPage => Menu
     {
     }
 
-    protected override void OnEnable()
+    public override void OnEnable()
     {
         base.OnEnable();
         StartCoroutine(SelectFirstWhenReady());
@@ -40,7 +40,7 @@ public class ChaptersPage : TwoAxisElementListPage // => ElementListPage => Menu
         GetComponentInChildren<ScrollRect>().verticalNormalizedPosition = 1;
     }
 
-    protected override void InitializePage()
+    public override void InitializePage()
     {
         Plugin.LOG.LogInfo("Initializing ChaptersPage");
         try
