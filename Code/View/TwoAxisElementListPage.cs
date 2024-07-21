@@ -76,8 +76,8 @@ public class TwoAxisElementListPage : ElementListPage
             StopCoroutine(_scrollCoroutine);
         _scrollCoroutine = StartCoroutine(SmoothScrollAnimate(1-normalizedPosition));
     }
-    
-    protected override void Update()
+
+    public override void Update()
     {
         // i dont think anyone ever intended for this class to be subclassed like this. alas i thrive.
         // this implements the same functionality as ElementListPage, but with the addition of horizontal navigation.

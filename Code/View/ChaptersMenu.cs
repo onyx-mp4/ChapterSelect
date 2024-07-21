@@ -13,7 +13,9 @@ namespace ChapterSelect.Code;
  */
 public class ChaptersMenu : TabbedMenu // => Interactable |
 {
-    protected override void OnEnable()
+    public int input_unpause;
+
+    public override void OnEnable()
     {
         base.OnEnable();
 
@@ -214,5 +216,18 @@ public class ChaptersMenu : TabbedMenu // => Interactable |
         input_back = 76;
         input_nextTab = 52;
         input_previousTab = 51;
+        input_unpause = 64;
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        if (base.isActive)
+		{
+			if (this.player.GetButtonDown(this.input_unpause))
+			{
+                base.Close(false);
+			}
+        }
     }
 }
