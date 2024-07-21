@@ -13,7 +13,7 @@ namespace ChapterSelect.Code;
  */
 public class ChaptersMenu : TabbedMenu // => Interactable |
 {
-    protected override void OnEnable()
+    public override void OnEnable()
     {
         base.OnEnable();
 
