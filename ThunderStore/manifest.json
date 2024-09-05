@@ -1,0 +1,9 @@
+{
+  "name": "Chapter Select",
+  "description": "Select scenes from the game to revisit. Implemented as it would've looked officially.",
+  "version_number": "0.1.0",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ],
+  "website_url": "https://github.com/onyx-mp4/ChapterSelect"
+}
